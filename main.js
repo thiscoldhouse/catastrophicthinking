@@ -4,12 +4,12 @@ $(document).ready(function(){
     'wordPairs': [
       ['loving', 'hateful'],
       ['for humans', 'for profit'],
-      // ['for people', 'for shareholders'],
-      // ['friendly', 'exploitative'],
-      // ['helpful', 'hurtful'],
-      // ['welcoming', 'scary'],
-      // ['inclusive', 'hateful'],
-      // ['fun', 'destructive'],
+      ['for people', 'for shareholders'],
+      ['friendly', 'exploitative'],
+      ['helpful', 'hurtful'],
+      ['welcoming', 'scary'],
+      ['inclusive', 'hateful'],
+      ['fun', 'destructive'],
 
 
     ]
