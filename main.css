@@ -156,15 +156,6 @@ a {
     font-weight: bold;
 }
 
-.profile-container img:hover {
-    cursor:pointer;
-    transform: scale(2.5);
-    -ms-transform: scale(2.5);
-    -webkit-transform: scale(2.5);
-    -moz-transform: scale(2.5);
-    -o-transform: scale(2.5);
-    height: auto;
-}
 
 .profile-container img {
     transition: transform 0.2s;
