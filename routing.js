@@ -42,6 +42,7 @@ function goToPage(page_name) {
 }
 
 function locationHasChanged(){
+  console.log('change');
   var newPage = window.location.hash.substring(1);
   newPage = newPage.split('?')[0];  //removes query string
   if (!newPage){

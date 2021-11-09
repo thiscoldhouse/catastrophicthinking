@@ -1,5 +1,6 @@
 $(document).ready(function(){
   var state = {
+    'isDaytime': (true ? Math.random() > .5 : false),
     'wordIndex': 0,
     'wordPairs': [
       ['loving', 'hateful'],
@@ -27,16 +28,28 @@ $(document).ready(function(){
     if (state.wordIndex > state.wordPairs.length - 1){
       state.wordIndex = 0;
     }
-
-
   }
 
-  function animateWord(elem, text){
-      elem
+  function toggleDayTime(){
+    state.isDaytime = !state.isDaytime;
+    if (state.isDaytime){
+      $("#day").css('display', 'block');
+      $("#night").css('display', 'none');
+      $('body').css('color', 'black');
+      $('.carousel-word').css('border', '1px solid black');
+      $('.button').css('border', '1px solid black');
+    }
+    else {
+      $("#night").css('display', 'block');
+      $("#day").css('display', 'none');
+      $('body').css('color', 'white');
+      $('.carousel-word').css('border', '1px solid white');
+      $('.button').css('border', '1px solid white');
+    }
   }
-
   // === page setup === //
   setInterval(rotateWords, 4000);
-
+  toggleDayTime();
+  $('#toggle').click(toggleDayTime);
 
 });
