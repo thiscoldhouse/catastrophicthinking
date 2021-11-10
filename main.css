@@ -435,6 +435,12 @@ a {
 .projects-container h3{
     text-align: center;
 }
+@media screen and (max-width: 500px){
+    h2{
+        text-align: center;
+    }
+}
+
 
 .blog-entry{
     font-size: 16px;
