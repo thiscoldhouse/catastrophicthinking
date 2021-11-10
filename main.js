@@ -3,16 +3,13 @@ $(document).ready(function(){
     'isDaytime': (true ? Math.random() > .5 : false),
     'wordIndex': 0,
     'wordPairs': [
-      ['loving', 'hateful'],
       ['for humans', 'for profit'],
+      ['delightful', 'exploitative'],
+      ['helpful', 'hostile'],
       ['for people', 'for shareholders'],
-      ['friendly', 'exploitative'],
-      ['helpful', 'hurtful'],
-      ['welcoming', 'scary'],
-      ['inclusive', 'hateful'],
+      ['inclusive', 'racist'],
+      ['leftist', 'fascist'],
       ['fun', 'destructive'],
-
-
     ]
   }
   function rotateWords(){
