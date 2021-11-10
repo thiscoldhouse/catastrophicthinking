@@ -1,0 +1,41 @@
+<p>
+  These projects take a lot of time and, unfortunately, some money. If you throw me a few bucks, that will go directly towards costs. In the unlikely event that I receive enough tips to recoup all my costs, I'll update this page.
+</p>
+
+<table class="tips-table">
+  <tbody>
+    <tr>
+      <td>PayPal</td>
+      <td><a href="https://paypal.me/catastrophicthinking">
+          paypal.me/catastrophicthinking
+      </a></td>
+    </tr>
+    <tr>
+      <td>Bitcoin</td>
+      <td id="bc1qf4exs3aemywnj4dpag78057wy6j9tt3fz8shvk" class="tip-copy">
+          copy address
+      </td>
+    </tr>
+    <tr>
+      <td>Ethereum</td>
+      <td id="0xdBc5E6c0015e55AD97B2D1cDE13eCda9659afce0" class="tip-copy">
+        copy address
+      </td>
+    </tr>
+  </tbody>
+</table>
+<script>
+  $('.tip-copy').on('click', function(e){
+    let address = $(e.currentTarget).attr('id');
+    var $temp = $("<input>");
+    $("body").append($temp);
+    $temp.val(address).select();
+    document.execCommand("copy");
+    $temp.remove();
+    $(e.currentTarget).html('copied!');
+    setTimeout(function(){
+      $(e.currentTarget).html('copy address');
+    }, 2500);
+
+  });
+</script>

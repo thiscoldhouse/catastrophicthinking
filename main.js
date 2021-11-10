@@ -44,9 +44,9 @@ $(document).ready(function(){
       $('.button').css('border', '1px solid white');
     }
   }
+
   // === page setup === //
   setInterval(rotateWords, 4000);
   toggleDayTime();
-  $('#toggle').click(toggleDayTime);
-
+  $('#toggle').on('click', toggleDayTime);
 });
