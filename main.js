@@ -27,26 +27,52 @@ $(document).ready(function(){
     }
   }
 
+  function makeDayTime(){
+    $("#day").css('display', 'block');
+    $("#night").css('display', 'none');
+    $('body').css('color', 'black');
+    $('.carousel-word').css('border', '1px solid black');
+    $('.button').css('border', '1px solid black');
+  }
+
+  function makeNightTime(){
+    $("#night").css('display', 'block');
+    $("#day").css('display', 'none');
+    $('body').css('color', 'white');
+    $('.carousel-word').css('border', '1px solid white');
+    $('.button').css('border', '1px solid white');
+    $('.sun').css('top', '100%');
+  }
+
+  function sunrise(){
+    makeDayTime();
+    $(".sun").animate({'top': '10px'}, 500);
+    sky.removeClass("sunset");
+  }
+
+  function sunset(){
+    $(".sun").animate({'top': '100%'}, 500, makeNightTime);
+  }
+
   function toggleDayTime(){
     state.isDaytime = !state.isDaytime;
     if (state.isDaytime){
-      $("#day").css('display', 'block');
-      $("#night").css('display', 'none');
-      $('body').css('color', 'black');
-      $('.carousel-word').css('border', '1px solid black');
-      $('.button').css('border', '1px solid black');
+      sunrise();
     }
     else {
-      $("#night").css('display', 'block');
-      $("#day").css('display', 'none');
-      $('body').css('color', 'white');
-      $('.carousel-word').css('border', '1px solid white');
-      $('.button').css('border', '1px solid white');
+      sunset();
     }
   }
 
   // === page setup === //
   setInterval(rotateWords, 4000);
-  toggleDayTime();
+  // initial background
+  if (state.isDaytime){
+    makeDayTime();
+  }
+  else {
+    makeNightTime();
+  }
+  // handler
   $('#toggle').on('click', toggleDayTime);
 });
