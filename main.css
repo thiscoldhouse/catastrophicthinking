@@ -290,6 +290,7 @@ body {
 }
 
 /* ~~~~~~~~~ NAVBAR ~~~~~~~~~` */
+
 .navbar{
     font-size: 26px;
     width: 98%;
@@ -378,7 +379,7 @@ a {
         height: 200px !important;
         width: 200px !important;
         max-width: 100% !important;
-}
+    }
 }
 .profile-container {
     vertical-align: top;
