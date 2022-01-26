@@ -454,3 +454,16 @@ a {
     font-variant: small-caps;
     cursor: pointer;
 }
+
+.thoughts-link{
+    padding: 25px;
+    border-bottom: 1px solid;
+}
+
+.thoughts-link h2{
+    text-decoration: underline;
+}
+
+.thoughts-link a{
+    text-decoration: none;
+}
